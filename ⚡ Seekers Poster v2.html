@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #1a1a1a;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: rgba(0, 0, 0, .12);
+  --color-border-light: rgba(0, 0, 0, .06);
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #ffffff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #F3F3F7;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #ffffff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: rgba(0, 128, 47, .1);
+  --color-success-border: rgba(0, 128, 47, .3);
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: rgba(219, 0, 0, .08);
+  --color-error-border: #ffe0e0;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #ffffff;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: rgba(242, 177, 0, .1);
+  --color-warning-border: rgba(242, 177, 0, .3);
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: rgba(0, 108, 224, .08);
+  --color-info-border: rgba(0, 108, 224, .3);
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .5);
+  --color-shadow: rgba(0, 0, 0, .08);
+  --color-hover: rgba(0, 0, 0, .05);
+  --color-tooltip-bg: rgba(0, 0, 0, .85);
+  --color-tooltip-text: #ffffff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08);
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #F3F3F7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #F3F3F7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333333;
+  --color-graph-node-text-dim: #7F8C8D;
+  --color-graph-edge-default: #95A5A6;
+  --color-graph-edge-cross: #E67E22;
+  --color-graph-edge-text: #666666;
+  --color-graph-edge-stroke: #ffffff;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #C0392B;
+  --color-graph-external-border: #95A5A6;
+  --color-graph-cat-file: #3498DB;
+  --color-graph-cat-folder: #7F8C8D;
+  --color-graph-cat-file-aggregate: #2980B9;
+  --color-graph-cat-class: #9B59B6;
+  --color-graph-cat-function: #2ECC71;
+  --color-graph-cat-method: #1ABC9C;
+  --color-graph-cat-variable: #F39C12;
+  --color-graph-cat-import: #D35400;
+  --color-graph-cat-module: #5B6ABF;
+  --color-graph-cat-concept: #E74C3C;
+  --color-graph-cat-person: #FF6B6B;
+  --color-graph-cat-org: #4ECDC4;
+  --color-graph-cat-organization: #4ECDC4;
+  --color-graph-cat-product: #A29BFE;
+  --color-graph-cat-metric: #FD79A8;
+  --color-graph-cat-location: #34495E;
+  --color-graph-cat-date: #E056A0;
+  --color-graph-cat-code: #3498DB;
+  --color-graph-cat-doc: #7F8C8D;
+  --color-graph-cat-url: #00B894;
+  --color-graph-cat-email: #6C5CE7;
+  --color-graph-cat-unknown: #BDC3C7;
+  --color-graph-rel-contains: #BDC3C7;
+  --color-graph-rel-extends: #9B59B6;
+  --color-graph-rel-implements: #3498DB;
+  --color-graph-rel-imports: #E67E22;
+  --color-graph-rel-uses: #2ECC71;
+  --color-graph-rel-calls: #27AE60;
+  --color-graph-rel-references: #F39C12;
+  --color-graph-rel-related-to: #95A5A6;
+  --color-graph-rel-works-on: #E74C3C;
+  --color-graph-rel-owns: #1ABC9C;
+  --color-graph-rel-depends-on: #E67E22;
+  --color-graph-rel-parent-of: #BDC3C7;
+  --qs-content: #ffffff;
+  --qs-main: #f9fafb;
+  --qs-primary-foreground: #1a1a1a;
+  --qs-secondary-foreground: #5e5e5e;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #9ca3af;
+  --qs-divider: rgba(0, 0, 0, .12);
+  --qs-default-border: rgba(0, 0, 0, .12);
+  --qs-neutral-soft: #d1d5db;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: rgba(0, 0, 0, .05);
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+}
+body { background: var(--color-bg); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C2E Insights — The Seekers | AAIS Poster Session 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>@font-face { font-family: "Amazon Ember"; src: url("https://d1irxbzpbkjejy.cloudfront.net/AmazonEmber_Rg.ttf") format("truetype"); font-weight: 400; } @font-face { font-family: "Amazon Ember"; src: url("https://d1irxbzpbkjejy.cloudfront.net/AmazonEmber_Bd.ttf") format("truetype"); font-weight: 700; } @font-face { font-family: "Amazon Ember"; src: url("https://d1irxbzpbkjejy.cloudfront.net/AmazonEmber_Lt.ttf") format("truetype"); font-weight: 300; }</style>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Amazon Ember', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .poster-board {
+    width: 1440px;
+    height: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  /* Fold lines */
+  .poster-board::before,
+  .poster-board::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+    z-index: 10;
+  }
+  .poster-board::before { left: calc(100% / 3.4); }
+  .poster-board::after { right: calc(100% / 3.4); }
+
+  /* ============ LEFT PANEL ============ */
+  .panel-left {
+    background: linear-gradient(160deg, #0f0c29 0%, #1a1040 40%, #24243e 100%);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Floating stars background */
+  .stars {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #ffd700;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  .panel-left > * { position: relative; z-index: 1; }
+
+  .team-badge {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .snitch-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 12px;
+  }
+
+  .team-name {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 38px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffd700, #f4a236, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .team-subtitle {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 15px;
+    color: #c4a35a;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .team-org {
+    font-size: 11px;
+    color: #8a84a8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ffd70060, transparent);
+    margin: 0 auto 20px;
+  }
+
+  .vision-box {
+    background: rgba(255, 215, 0, 0.06);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+  }
+
+  .vision-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffd700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .vision-text {
+    font-size: 13px;
+    color: #d0c8e8;
+    line-height: 1.6;
+  }
+
+  .hp-quote-box {
+    background: linear-gradient(135deg, rgba(116, 0, 0, 0.2), rgba(139, 69, 19, 0.15));
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .hp-quote {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 13px;
+    color: #ffd700;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+
+  .hp-attribution {
+    font-size: 10px;
+    color: #8a84a8;
+    letter-spacing: 1px;
+  }
+
+  .house-banner {
+    background: linear-gradient(135deg, #740000, #8B0000);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    margin-top: auto;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+  }
+
+  .house-banner-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 14px;
+    color: #ffd700;
+    margin-bottom: 4px;
+  }
+
+  .house-banner-sub {
+    font-size: 10px;
+    color: #f0d0d0;
+    letter-spacing: 1px;
+  }
+
+  /* ============ CENTER PANEL ============ */
+  .panel-center {
+    background: linear-gradient(180deg, #16133a 0%, #1c1848 50%, #1a1540 100%);
+    padding: 30px 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-center-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 50% 20%, rgba(255, 215, 0, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .panel-center > * { position: relative; z-index: 1; }
+
+  .center-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 20px;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .center-subtitle {
+    font-size: 12px;
+    color: #9990b8;
+    text-align: center;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  /* Why It Matters */
+  .why-section {
+    margin-bottom: 24px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .section-header-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, #ffd70040, transparent);
+  }
+
+  .section-header-text {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 16px;
+    color: #ffd700;
+    white-space: nowrap;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .why-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    border-radius: 12px;
+    padding: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .why-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 215, 0, 0.3);
+  }
+
+  .why-card-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .why-card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e8e0ff;
+    margin-bottom: 6px;
+  }
+
+  .why-card-desc {
+    font-size: 11px;
+    color: #9990b8;
+    line-height: 1.5;
+  }
+
+  /* Architecture Flow — Quidditch Pitch */
+  .flow-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flow-container {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    border-radius: 14px;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+  }
+
+  .flow-label {
+    font-size: 10px;
+    color: #ffd700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .flow-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .flow-node {
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.3;
+    min-width: 110px;
+    position: relative;
+  }
+
+  .flow-node.source {
+    background: linear-gradient(135deg, #2d1f5e, #3a2878);
+    border: 1px solid #6c5ce7;
+    color: #d0c8f0;
+  }
+
+  .flow-node.library {
+    background: linear-gradient(135deg, #1a3a2a, #1e4d34);
+    border: 1px solid #00b894;
+    color: #a8e6cf;
+  }
+
+  .flow-node.rum {
+    background: linear-gradient(135deg, #3d2800, #5a3e00);
+    border: 1px solid #ffd700;
+    color: #ffe680;
+  }
+
+  .flow-node.output {
+    background: linear-gradient(135deg, #1a1a3a, #2a2a5a);
+    border: 1px solid #74b9ff;
+    color: #a8d8ff;
+  }
+
+  .flow-node.insight {
+    background: linear-gradient(135deg, #3a0a0a, #5a1a1a);
+    border: 1px solid #ff6b6b;
+    color: #ffb8b8;
+  }
+
+  .flow-arrow {
+    color: #ffd700;
+    font-size: 18px;
+    opacity: 0.6;
+  }
+
+  .flow-node-emoji {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .flow-node-label {
+    font-size: 10px;
+    opacity: 0.7;
+    font-weight: 400;
+  }
+
+  .flow-snitch-trail {
+    text-align: center;
+    margin: 8px 0;
+    font-size: 11px;
+    color: #ffd700;
+    letter-spacing: 6px;
+    opacity: 0.5;
+  }
+
+  /* ============ RIGHT PANEL ============ */
+  .panel-right {
+    background: linear-gradient(160deg, #0f0c29 0%, #1a1040 40%, #24243e 100%);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-right > * { position: relative; z-index: 1; }
+
+  .services-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 18px;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .services-subtitle {
+    font-size: 11px;
+    color: #8a84a8;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .service-card {
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+  }
+
+  .service-card.csm1 {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.15), rgba(108, 92, 231, 0.05));
+    border: 1px solid rgba(108, 92, 231, 0.25);
+  }
+  .service-card.csm1::before { background: #6c5ce7; }
+
+  .service-card.csmi {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 215, 0, 0.04));
+    border: 1px solid rgba(255, 215, 0, 0.25);
+  }
+  .service-card.csmi::before { background: #ffd700; }
+
+  .service-card.lids {
+    background: linear-gradient(135deg, rgba(0, 184, 148, 0.15), rgba(0, 184, 148, 0.05));
+    border: 1px solid rgba(0, 184, 148, 0.25);
+  }
+  .service-card.lids::before { background: #00b894; }
+
+  .service-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .service-icon { font-size: 22px; }
+
+  .service-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e8e0ff;
+  }
+
+  .service-version {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    color: #fff;
+    margin-left: auto;
+  }
+
+  .csm1 .service-version { background: #6c5ce7; }
+  .csmi .service-version { background: #b8860b; }
+  .lids .service-version { background: #00b894; }
+
+  .service-desc {
+    font-size: 11px;
+    color: #9990b8;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-left: 8px;
+  }
+
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-left: 8px;
+  }
+
+  .service-tag {
+    font-size: 9px;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #b0a8d0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* CTA */
+  .cta-box {
+    margin-top: auto;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.08));
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 16px;
+    color: #ffd700;
+    margin-bottom: 10px;
+  }
+
+  .cta-slack {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #d0c8e8;
+    margin-bottom: 10px;
+  }
+
+  .cta-subtext {
+    font-size: 10px;
+    color: #8a84a8;
+    line-height: 1.5;
+  }
+
+  /* Event footer strip */
+  .event-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #740000, #8B0000, #740000);
+    padding: 8px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    z-index: 20;
+  }
+
+  .event-strip span {
+    font-size: 11px;
+    color: #ffd700;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .event-strip .dot {
+    width: 4px;
+    height: 4px;
+    background: #ffd700;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+<div class="poster-board">
+
+  <!-- ======== LEFT PANEL ======== -->
+  <div class="panel-left">
+    <div class="stars" id="starsLeft"></div>
+
+    <div class="team-badge">
+      <!-- Golden Snitch SVG -->
+      <div class="snitch-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Wings -->
+          <path d="M15 42 Q5 30 12 20 Q20 15 30 22 Q35 28 38 38" fill="none" stroke="#c4a35a" stroke-width="1.5" opacity="0.7"></path>
+          <path d="M18 44 Q8 34 14 25 Q22 20 32 28 Q36 33 38 40" fill="none" stroke="#c4a35a" stroke-width="1.5" opacity="0.5"></path>
+          <path d="M12 40 Q2 26 10 16 Q18 10 28 18 Q34 24 37 36" fill="none" stroke="#c4a35a" stroke-width="1.5" opacity="0.4"></path>
+          <path d="M85 42 Q95 30 88 20 Q80 15 70 22 Q65 28 62 38" fill="none" stroke="#c4a35a" stroke-width="1.5" opacity="0.7"></path>
+          <path d="M82 44 Q92 34 86 25 Q78 20 68 28 Q64 33 62 40" fill="none" stroke="#c4a35a" stroke-width="1.5" opacity="0.5"></path>
+          <path d="M88 40 Q98 26 90 16 Q82 10 72 18 Q66 24 63 36" fill="none" stroke="#c4a35a" stroke-width="1.5" opacity="0.4"></path>
+          <!-- Ball -->
+          <circle cx="50" cy="50" r="16" fill="url(#snitchGrad)" stroke="#b8860b" stroke-width="1.5"></circle>
+          <ellipse cx="50" cy="46" rx="8" ry="4" fill="rgba(255,255,255,0.2)"></ellipse>
+          <!-- Band -->
+          <ellipse cx="50" cy="50" rx="16" ry="2" fill="none" stroke="#b8860b" stroke-width="1"></ellipse>
+          <defs>
+            <radialGradient id="snitchGrad" cx="40%" cy="35%">
+              <stop offset="0%" stop-color="#ffe680"></stop>
+              <stop offset="50%" stop-color="#ffd700"></stop>
+              <stop offset="100%" stop-color="#b8860b"></stop>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="team-name">Seekers</div>
+      <div class="team-subtitle">C2E Insights</div>
+      <div class="team-org">Amazon Connect Customer</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="vision-box">
+      <div class="vision-label">⚡ Our Mission</div>
+      <div class="vision-text">
+        We are the <strong style="color: #ffd700">central data insights hub</strong> for Amazon Connect Customer — enabling teams to optimize agent and end-user experiences through inspection, analysis, and actionable insights.
+      </div>
+    </div>
+
+    <div class="hp-quote-box">
+      <div class="hp-quote">
+        "I caught the Snitch! I caught the Snitch!"
+      </div>
+      <div class="hp-attribution">— Every Seeker's first successful data capture</div>
+    </div>
+
+    <div class="vision-box" style="margin-bottom: 20px;">
+      <div class="vision-label">🧹 Why "Seekers"?</div>
+      <div class="vision-text">
+        In Quidditch, the Seeker's job is to find the <strong style="color:#ffd700">Golden Snitch</strong> — the tiny, elusive game-changer hidden in a sea of chaos. That's us. We sift through millions of client-side signals to find the <strong style="color:#ffd700">insights that matter</strong> — the ones that change the game for our customers.
+      </div>
+    </div>
+
+    <div class="house-banner">
+      <div class="house-banner-title">⚡ House Seekers</div>
+      <div class="house-banner-sub">Est. 2023 · JFK14 · New York</div>
+    </div>
+  </div>
+
+  <!-- ======== CENTER PANEL ======== -->
+  <div class="panel-center">
+    <div class="panel-center-bg"></div>
+
+    <div class="center-title">✨ Why It Matters</div>
+    <div class="center-subtitle">Catching the Golden Insights for Amazon Connect</div>
+
+    <div class="why-section">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-card-icon">👁️</div>
+          <div class="why-card-title">Real-Time Visibility</div>
+          <div class="why-card-desc">Like a Seeker scanning the pitch, we give teams live visibility into how their applications perform in the wild — no more flying blind.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🔍</div>
+          <div class="why-card-title">Faster Diagnosis</div>
+          <div class="why-card-desc">When issues hide in the noise, our metrics pinpoint the problem in seconds — cutting time-to-market and keeping customers happy.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🗺️</div>
+          <div class="why-card-title">Data-Driven Roadmaps</div>
+          <div class="why-card-desc">We transform raw telemetry into prescriptive insights that answer: "What should we build next?" — no crystal ball needed, just data.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🏗️</div>
+          <div class="why-card-title">Unified Experience Layer</div>
+          <div class="why-card-desc">One platform to rule them all — a unified CloudWatch RUM dashboard across every Connect surface. All houses, one scoreboard.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Flow — "The Quidditch Pitch" -->
+    <div class="flow-section">
+      <div class="section-header">
+        <div class="section-header-line"></div>
+        <div class="section-header-text">⚡ The Quidditch Pitch — How Data Flows</div>
+        <div class="section-header-line" style="background: linear-gradient(90deg, transparent, #ffd70040);"></div>
+      </div>
+
+      <div class="flow-container">
+        <div class="flow-label">From Client to Insight — Chasing the Snitch ✨</div>
+
+        <!-- Row 1: Sources -->
+        <div class="flow-row">
+          <div class="flow-node source">
+            <div class="flow-node-emoji">🖥️</div>
+            <div>Agent CCP</div>
+            <div class="flow-node-label">Workspace</div>
+          </div>
+          <div class="flow-node source">
+            <div class="flow-node-emoji">⚙️</div>
+            <div>Admin Console</div>
+            <div class="flow-node-label">SPA Pages</div>
+          </div>
+          <div class="flow-node source">
+            <div class="flow-node-emoji">🔌</div>
+            <div>3P Integrations</div>
+            <div class="flow-node-label">Custom Apps</div>
+          </div>
+        </div>
+
+        <div class="flow-snitch-trail">✦ · · · ✦ · · · ✦ · · · ✦</div>
+
+        <!-- Row 2: Library + RUM -->
+        <div class="flow-row">
+          <div class="flow-arrow">↓</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-node library" style="min-width: 200px;">
+            <div class="flow-node-emoji">📦</div>
+            <div>SeekersClientSideMetrics</div>
+            <div class="flow-node-label">CSMI Library / SDK</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node rum" style="min-width: 180px;">
+            <div class="flow-node-emoji">🏆</div>
+            <div>CloudWatch RUM</div>
+            <div class="flow-node-label">AppMonitor · Per-Team</div>
+          </div>
+        </div>
+
+        <div class="flow-snitch-trail">✦ · · · ✦ · · · ✦ · · · ✦</div>
+
+        <!-- Row 3: Outputs -->
+        <div class="flow-row">
+          <div class="flow-arrow">↓</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-node output">
+            <div class="flow-node-emoji">📊</div>
+            <div>Dashboards</div>
+            <div class="flow-node-label">CW RUM Views</div>
+          </div>
+          <div class="flow-node output">
+            <div class="flow-node-emoji">📋</div>
+            <div>CW Logs</div>
+            <div class="flow-node-label">Query &amp; Join</div>
+          </div>
+          <div class="flow-node insight">
+            <div class="flow-node-emoji">🏅</div>
+            <div>Actionable Insights</div>
+            <div class="flow-node-label">The Golden Snitch!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== RIGHT PANEL ======== -->
+  <div class="panel-right">
+    <div class="stars" id="starsRight"></div>
+
+    <div class="services-title">🧰 Our Services</div>
+    <div class="services-subtitle">The Seeker's Toolkit</div>
+
+    <!-- CSM v1.0 -->
+    <div class="service-card csm1">
+      <div class="service-header">
+        <div class="service-icon">🪄</div>
+        <div class="service-name">Client Side Metrics v1.0</div>
+        <div class="service-version">LEGACY</div>
+      </div>
+      <div class="service-desc">The original spell — our first-gen telemetry pipeline. Still powering critical softphone and data aggregation flows.</div>
+      <div class="service-tags">
+        <span class="service-tag">LDAS</span>
+        <span class="service-tag">LLPS</span>
+        <span class="service-tag">LSTS</span>
+      </div>
+    </div>
+
+    <!-- CSMI v2.0 -->
+    <div class="service-card csmi">
+      <div class="service-header">
+        <div class="service-icon">⚡</div>
+        <div class="service-name">CSMI</div>
+        <div class="service-version">v2.0</div>
+      </div>
+      <div class="service-desc">The Firebolt of metrics — our next-gen library built on CloudWatch RUM. APM &amp; custom events with per-team dashboards and log joins.</div>
+      <div class="service-tags">
+        <span class="service-tag">CloudWatch RUM</span>
+        <span class="service-tag">AppMonitor</span>
+        <span class="service-tag">SDK</span>
+        <span class="service-tag">SPA Ready</span>
+      </div>
+    </div>
+
+    <!-- LIDS -->
+    <div class="service-card lids">
+      <div class="service-header">
+        <div class="service-icon">🔮</div>
+        <div class="service-name">LilyInsightsDataService</div>
+        <div class="service-version">LIDS</div>
+      </div>
+      <div class="service-desc">The Pensieve of data — aggregation, querying, and a data lake that lets teams revisit and analyze historical insights.</div>
+      <div class="service-tags">
+        <span class="service-tag">Aggregation</span>
+        <span class="service-tag">Query</span>
+        <span class="service-tag">Data Lake</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <div class="cta-title">🧹 Join the Team!</div>
+      <div class="cta-slack">
+        💬 #lilax-core-svcs-interest-internal
+      </div>
+      <div class="cta-subtext">
+        Stop by, say hi, ask us anything!<br>
+        We'll help you catch your Golden Snitch 🏆
+      </div>
+    </div>
+  </div>
+
+  <!-- Event footer -->
+  <div class="event-strip">
+    <span>⚡ AAIS Poster Session 2026</span>
+    <div class="dot"></div>
+    <span>Thursday, May 7 · 3–5 PM ET</span>
+    <div class="dot"></div>
+    <span>JFK14 · 11th Floor Cafe</span>
+  </div>
+</div>
+
+<script>
+  // Generate floating stars
+  function createStars(containerId, count) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    for (let i = 0; i < count; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.width = (1 + Math.random() * 3) + 'px';
+      star.style.height = star.style.width;
+      star.style.animationDelay = Math.random() * 4 + 's';
+      star.style.animation = `twinkle ${2 + Math.random() * 3}s ease-in-out infinite`;
+      container.appendChild(star);
+    }
+  }
+
+  createStars('starsLeft', 40);
+  createStars('starsRight', 40);
+
+  // Add twinkle keyframes
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 0.8; transform: scale(1); }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
+</body></html>
